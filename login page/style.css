@@ -3,16 +3,16 @@ body {
 }
 
 h1{
-    text-align: center;
-    font-size: 50px;
+    font-size: 30px;
 }
 
 label{
     font-weight: bold;
+    float: left;
 }
 
 .size{
-    font-size: 25px;
+    font-size: 15px;
 }
 
 input[type=text], input[type=password] {
@@ -31,10 +31,10 @@ button {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 80%;
 }
 
-button:hover {
+button:hover{
     opacity: 0.8;
 }
 
@@ -57,19 +57,11 @@ button:hover {
 .content {
     padding: 15px 20px 30px 20px;
     background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% top, 15% bottom and centered */
+    margin: 5% auto 15%; /* 5% top, 15% bottom and centered */
     border: 1px solid #888;
     width: 50%;
     border-radius: 20px;
-}
-
-.google{
-    background-color: crimson;
-    width: 40%;
-    padding: 13px;
-    box-sizing: border-box;
     text-align: center;
-    margin: auto;
 }
 
 hr{
@@ -78,10 +70,8 @@ hr{
     margin: 21px auto;
 }
 
-a {
-    font-size: 17px;
-    text-decoration: none;
-    color: #eee;
+.abcRioButton {
+    margin: auto;
 }
 
 /* Zoom Animation */
