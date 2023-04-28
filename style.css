@@ -1,0 +1,115 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	transition: all 0.2s;
+}
+
+body {
+	background-color: hsl(0, 0%, 86%);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	width: 700px;
+	height: 500px;
+	background-color: white;
+	border-radius: 8% 8% 28% 8%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 50px;
+}
+
+.inputs {
+	display: flex;
+	gap: 25px;
+}
+
+label {
+	color: hsl(0, 1%, 44%);
+	font-size: 11px;
+	letter-spacing: 2px;
+}
+
+input {
+	width: 120px;
+	height: 50px;
+	border-radius: 5px;
+	border: 1px solid hsl(0, 0%, 86%);
+	padding: 10px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+input:hover {
+	border-color: hsl(259, 100%, 65%);
+}
+
+.inputfield {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.error {
+	color: red;
+	font-size: 12px;
+}
+
+.go {
+	display: flex;
+	align-items: center;
+}
+
+.go hr {
+	width: calc(100% - 70px);
+	border-color: hsl(0, 0%, 86%);
+}
+
+.go .button {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background-color: hsl(259, 100%, 65%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.go .button:hover {
+	background-color: black;
+	cursor: pointer;
+}
+
+.display {
+	font-size: 80px;
+	font-weight: bold;
+}
+
+.output {
+	color: hsl(259, 100%, 65%);
+}
+
+.attribution {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+}
+
+@media screen and (max-width: 670px) {
+	.container {
+		width: 490px;
+	}
+	.button {
+		position: relative;
+		right: 50%;
+		align-self: center;
+	}
+	.go hr {
+		width: calc(100% - 70px);
+	}
+}

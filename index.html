@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="style.css" />
+
+		<title>Age calculator app</title>
+	</head>
+	<body>
+		<div class="container">
+			<form class="inputs">
+				<div class="dayinput inputfield">
+					<label for="day" id="daylab">DAY</label>
+					<input type="text" name="day" id="day" placeholder="DD" />
+					<span id="dayerror" class="error"></span>
+				</div>
+				<div class="monthinput inputfield">
+					<label for="month" id="monthlab">MONTH</label>
+					<input
+						type="text"
+						name="month"
+						id="month"
+						placeholder="MM"
+					/>
+					<span id="montherror" class="error"></span>
+				</div>
+				<div class="yearinput inputfield">
+					<label for="year" id="yearlab">YEAR</label>
+					<input
+						type="text"
+						name="year"
+						id="year"
+						placeholder="YYYY"
+					/>
+					<span id="yearerror" class="error"></span>
+				</div>
+			</form>
+
+			<div class="go">
+				<hr />
+				<div class="button" id="go">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="46"
+						height="44"
+						viewBox="0 0 46 44"
+					>
+						<g fill="none" stroke="#FFF" stroke-width="2">
+							<path
+								d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+							/>
+						</g>
+					</svg>
+				</div>
+			</div>
+
+			<div class="display">
+				<div class="year">
+					<span class="yeardisplay output" id="yearOut">--</span>
+					<span>years</span>
+				</div>
+				<div class="month">
+					<span class="monthdisplay output" id="monthOut">--</span>
+					<span>months</span>
+				</div>
+				<div class="day">
+					<span class="daydisplay output" id="dayOut">--</span>
+					<span>days</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="attribution">
+			Challenge by
+			<a
+				href="https://www.frontendmentor.io?ref=challenge"
+				target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">raid</a>.
+		</div>
+
+		<script src="main.js"></script>
+	</body>
+</html>
