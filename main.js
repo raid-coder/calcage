@@ -33,6 +33,19 @@ function showresult() {
 	var month = current.getMonth() + 1;
 	var year = current.getFullYear();
 
+	var daysNum;
+	if (month == 2) {
+		if (year % 4 == 0) {
+			daysNum = 29;
+		} else {
+			daysNum = 28;
+		}
+	} else if ((month % 2 == 0) ^ (month > 7)) {
+		daysNum = 30;
+	} else {
+		daysNum = 31;
+	}
+
 	if (bDay === "") {
 		showError(dayErr, dayInput, dayLab, "This feild is required");
 		err = true;
@@ -51,7 +64,7 @@ function showresult() {
 
 	var dayDiff = day - bDay;
 	if (day < bDay) {
-		dayDiff += 30;
+		dayDiff += daysNum;
 		month--;
 	}
 
@@ -79,28 +92,11 @@ function showresult() {
 	monthOutput.textContent = monthDiff;
 	yearOutput.textContent = yearDiff;
 
-	if (!isValidDate(bYear, bMonth, bDay)) {
+	if (bDay > daysNum) {
 		showError(dayErr, dayInput, dayLab, "Must be a valid date");
 		showError(monthErr, monthInput, monthLab, "");
 		showError(yearErr, yearInput, yearLab, "");
 	}
-}
-
-function isValidDate(year, month, day) {
-	if (month == 2) {
-		if (year % 4 == 0) {
-			if (day > 29) {
-				console.log(1);
-				return false;
-			}
-		} else if (day > 28) {
-			console.log(2);
-			return false;
-		}
-	} else if ((month % 2 == 0) ^ (month > 7) && day == 31) {
-		return false;
-	}
-	return true;
 }
 
 function clearOutput() {
