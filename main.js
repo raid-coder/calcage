@@ -34,13 +34,13 @@ function showresult() {
 	var year = current.getFullYear();
 
 	var daysNum;
-	if (month == 2) {
-		if (year % 4 == 0) {
+	if (bMonth == 2) {
+		if (bYear % 4 == 0) {
 			daysNum = 29;
 		} else {
 			daysNum = 28;
 		}
-	} else if ((month % 2 == 0) ^ (month > 7)) {
+	} else if ((bMonth % 2 == 0) ^ (bMonth > 7)) {
 		daysNum = 30;
 	} else {
 		daysNum = 31;
